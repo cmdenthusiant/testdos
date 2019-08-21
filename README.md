@@ -1,3 +1,8 @@
 # testdos
-this is a dos script, please use python3
-if you don't have cfscrape, pls install it
+just a dos script
+## install
+    pip3 install sfscrape
+    git clone 
+    cd testdos
+## use
+    python3 testdos.py
